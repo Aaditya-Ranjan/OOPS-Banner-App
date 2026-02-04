@@ -1,15 +1,16 @@
 /**
- * UC4: Render OOPS Banner using Arrays and Loop
+ * UC5: Render OOPS Banner using Nested Loops
  *
  * Goal:
- * Refactor previous use cases by storing banner patterns
- * inside a 2D array and printing them using a loop.
+ * Enhance UC4 by printing the banner using nested loops
+ * instead of String.join(), improving loop control
+ * and understanding of multi-dimensional arrays.
  *
  * Concepts:
- * - Arrays
- * - Nested Data Structure
- * - Looping
- * - Code Refactoring
+ * - Nested Loops
+ * - 2D Arrays
+ * - Iteration Control
+ * - Refactoring
  */
 
 public class OOPSBannerApp {
@@ -27,11 +28,17 @@ public class OOPSBannerApp {
                 {"    ***    ", "    ***    ", " **        ", "  *******  "}
         };
 
-        // Loop through rows
-        for (String[] row : banner) {
+        // Outer loop → rows
+        for (int i = 0; i < banner.length; i++) {
 
-            // join letters in each row
-            System.out.println(String.join(" ", row));
+            // Inner loop → letters
+            for (int j = 0; j < banner[i].length; j++) {
+
+                System.out.print(banner[i][j] + " ");
+            }
+
+            // move to next line after printing row
+            System.out.println();
         }
     }
 }
