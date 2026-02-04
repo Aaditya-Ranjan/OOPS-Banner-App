@@ -1,27 +1,34 @@
 /**
- * OOPSBannerApp UC2 – Banner Display Application
+ * UC3: Render OOPS as Banner using String.join()
  *
- * This program extends UC1 by displaying the word "OOPS"
- * in a large ASCII banner format using asterisks (*) and spaces.
- * Each line of the banner is printed using individual
- * System.out.println() statements with string concatenation.
+ * Goal:
+ * Refactor UC2 by replacing string concatenation (+)
+ * with String.join() to improve memory efficiency,
+ * readability, and maintainability.
  *
- * Concepts Used:
- * - ASCII Art
- * - String Concatenation
- * - Multiple Print Statements
+ * Actor: User
+ *
+ * Flow:
+ * User runs the program → String.join() constructs each
+ * line of the banner → program prints the OOPS banner → exits.
+ *
+ * Key Concepts:
+ * - String.join()
+ * - Memory Efficiency
+ * - String Immutability
+ * - Code Refactoring
  */
 
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        System.out.println("    ***    " + "    ***    " + " *******   " + "    ******* ");
-        System.out.println("  **   **  " + "  **   **  " + " **     ** " + "  **        ");
-        System.out.println(" **     ** " + " **     ** " + " **     ** " + "    **      ");
-        System.out.println(" **     ** " + " **     ** " + " *******   " + "      **    ");
-        System.out.println(" **     ** " + " **     ** " + " **        " + "         ** ");
-        System.out.println("  **   **  " + "  **   **  " + " **        " + "         ** ");
-        System.out.println("    ***    " + "    ***    " + " **        " + "  *******   ");
+        System.out.println(String.join(" ","    ***    " , "    ***    " , " *******   " , "    ******* "));
+        System.out.println(String.join(" ","  **   **  " , "  **   **  " , " **     ** " , "  **        "));
+        System.out.println(String.join(" "," **     ** " , " **     ** " , " **     ** " , "    **      "));
+        System.out.println(String.join(" "," **     ** " , " **     ** " , " *******   " , "      **    "));
+        System.out.println(String.join(" "," **     ** " , " **     ** " , " **        " , "         ** "));
+        System.out.println(String.join(" ","  **   **  " , "  **   **  " , " **        " , "         ** "));
+        System.out.println(String.join(" ","    ***    " , "    ***    " , " **        " , "  *******   "));
     }
 }
